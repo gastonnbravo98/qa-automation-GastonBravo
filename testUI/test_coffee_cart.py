@@ -7,7 +7,6 @@ URL = "https://coffee-cart.app/"
 
 @pytest.fixture
 def driver():
-    """Abre Chrome en la página del café antes de cada test y lo cierra al terminar."""
     driver = webdriver.Chrome()
     driver.maximize_window()
     driver.implicitly_wait(5)  
@@ -20,7 +19,6 @@ def agregar_cafe(driver, nombre):
 
 
 def texto_carrito(driver):
-    """Devuelve el texto del link del carrito, por ejemplo 'cart (1)'."""
     return driver.find_element(By.CSS_SELECTOR, "a[aria-label='Cart page']").text.lower()
 
 
