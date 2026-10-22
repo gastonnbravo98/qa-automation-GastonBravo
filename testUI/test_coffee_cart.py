@@ -53,8 +53,8 @@ def test_compra_completa(driver):
     ir_al_carrito(driver)
     driver.find_element(By.CSS_SELECTOR, "button[data-test='checkout']").click()
 
-    driver.find_element(By.ID, "name").send_keys("Marty Test")
-    driver.find_element(By.ID, "email").send_keys("marty@test.com")
+    driver.find_element(By.ID, "name").send_keys("Gaston Test")
+    driver.find_element(By.ID, "email").send_keys("gaston@test.com")
     driver.find_element(By.ID, "submit-payment").click()
 
    
